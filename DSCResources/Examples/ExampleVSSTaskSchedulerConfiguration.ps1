@@ -24,6 +24,14 @@
            Drive = "C:"
            TriggerTime = "12:00PM"
        }
+	   
+       cVSSTaskScheduler 7DaysPerWeek{
+           TaskName = "ShadowCopyVolumeNoon"
+           Ensure = "Present"
+           Drive = "C:"
+           TriggerTime = "7:00AM"
+           DaysOfWeeks = @("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+       }
     }
 }
 
